@@ -1,0 +1,107 @@
+Int ASH_main {()}
+[
+    $$this is comment
+    ShowStr {("Ashikur Rahman")} s:
+    Enter {( )} s:
+    ShowStr {("Roll: 1707090")} s:
+    Enter {( )} s:
+
+    Int Var#result s:
+
+    $$ modulo operation >>
+
+    Int Var#ash1 => 18 s:
+    Var#result => Var#ash1 %: 8 s:
+    Enter {( )} s:
+    ShowStr {("Modulo operation: ")} s:
+    ShowNum {( Var#result)} s:
+    Enter {()} s:
+
+    $$ ceil operation >>
+
+    Int Var#ash2 => 5 s:
+    Int Var#ash3 => 2 s:
+    Var#result => Var#ash2 Ceil Var#ash3 s:
+    Enter {( )} s:
+    ShowStr {("Ceil operation: ")} s:
+    ShowNum {( Var#result)} s:
+    Enter {()} s:
+	
+    Var#ash2 Inc: s:
+
+    $$ condition >>
+    
+    If {( 5 Kom 4 )}
+	[
+        $$statement
+    ]
+	Againif {( 5 Kom 4 )}
+    [
+        $$statement
+    ]
+	Fi
+	[
+		If {( 5 Beshi 4 )}
+		[
+            Enter {( )} s:
+            ShowStr {("IF ELSE WORKED.")} s:
+            Enter {()} s:
+
+		]
+	]
+
+    $$ switch >>
+
+	Match {(2)}
+	[
+		1)=
+			[
+                $$statement
+            ]
+		2)=
+			[
+                ShowStr {("Switch/Match is working")} s:
+                Enter {( )} s:
+            ]
+        None)=
+            [
+                ShowStr {("Nothing is matched")} s:
+                Enter {( )} s:
+            ]
+	]
+
+    $$ Loop >>
+    Int Var#x => 1  .. Var#y => 5 .. Var#y1 => 8 .. Var#z => 0 s:
+    Rep {( Var#x Limit: Var#y Inc: 1 )}
+	[
+		Int Var#x1 => 1 s:
+        Rep {( Var#x1 Limit: Var#y1 Inc: 1 )}
+		[
+			Var#z => Var#z +: 3 s:
+		]
+	]
+    ShowNum {( Var#z)} s:
+    Enter {()} s:
+
+    $$while / until loop >>
+    
+    Int Var#w => 1 s:
+    Until {(Var#w Kom 5)}
+    [
+        Enter {()} s:
+        Enter {()} s:
+        ShowStr{( "Until" )} s:
+        Enter {()} s:
+        Var#w => Var#w +: 1 s: 
+    ]
+
+]
+
+
+Int ASH_def#fn {( Int Var#param )}
+[
+	Enter {()} s:
+    Enter {()} s:
+    ShowStr{( "My function" )} s:
+	Enter {()} s:
+]
