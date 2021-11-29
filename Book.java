@@ -1,9 +1,9 @@
 public class Book {
 
-    private String titleA;
+    private String title;
     private String writer;
 
-    public Book(String titleA, String writer){
+    public Book(String title, String writer){
         this.titleA = titleA;
         this.writer = writer;
     }
